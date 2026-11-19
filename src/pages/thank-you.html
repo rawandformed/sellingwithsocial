@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>You're in | Selling with Social</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="{{img:mark.png}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+<!-- Meta Pixel: paste the base code here, plus a Lead or CompleteRegistration event (see README) -->
+<style>
+{{> base.css}}
+{{> funnel.css}}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <a class="logo" href="index.html" aria-label="Selling with Social home"><img class="std" src="{{img:logo.png}}" alt="Selling with Social" width="360" height="169"></a>
+</header>
+
+<main class="page">
+  <div class="orbs" aria-hidden="true"><span class="orb s"></span><span class="orb b"></span></div>
+  <div class="wrap ty">
+    <div>
+      <span class="eyebrow">You're registered</span>
+      <h1>You're <span class="hl">in.</span></h1>
+      <p class="lede" style="margin-top:20px" id="when">Check your inbox. The link, date and time are on their way by email and text.</p>
+    </div>
+    <div class="prep">
+      <div><span class="n">01</span><b>Add it to your calendar</b><p>The email has the link. Block the time now so a job doesn't land on top of it.</p></div>
+      <div><span class="n">02</span><b>Have your website open</b><p>We build an ad from a real site. Follow along with yours.</p></div>
+      <div><span class="n">03</span><b>Know your agency bill</b><p>Bring what you pay each month. We'll show what that looks like in-house.</p></div>
+    </div>
+    <div class="next">
+      <div><b>Don't want to wait?</b><span>$297 a month, no setup fee. Go straight into the ad launcher.</span></div>
+      <a class="btn btn-accent buy" href="index.html#pricing">Start for $297/mo</a>
+    </div>
+  </div>
+</main>
+
+{{> footer.html}}
+
+<script>
+(function(){
+{{> config.js}}
+  if (SWS.NEXT_WEBINAR) document.getElementById('when').textContent = 'We go live ' + SWS.NEXT_WEBINAR + '. The link is on its way by email and text.';
+  if (SWS.CHECKOUT_URL) document.querySelector('.buy').href = SWS.CHECKOUT_URL;
+})();
+</script>
+</body>
+</html>

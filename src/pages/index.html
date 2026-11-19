@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selling with Social | Fire your agency</title>
+<meta name="description" content="Fire your agency. Make and launch your own Facebook and Instagram ads with AI from one simple tool. $297 a month, no setup fee.">
+<meta property="og:title" content="Fire your agency. | sellingwithsocial.com">
+<meta property="og:description" content="Make and launch your own Facebook and Instagram ads with AI. $297 a month, no setup fee.">
+<link rel="icon" href="{{img:mark.png}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+<!-- Meta Pixel: paste the base code here (see README) -->
+<style>
+{{> base.css}}
+{{> index.css}}
+</style>
+</head>
+<body>
+
+<nav class="nav glass" id="nav" aria-label="Primary">
+  <a class="logo" href="#top" aria-label="Selling with Social"><img class="std" src="{{img:logo.png}}" alt="Selling with Social" width="360" height="169"><img class="rev" src="{{img:logo-reversed.png}}" alt="" width="360" height="169"></a>
+  <ul>
+    <li><a href="#launcher">How it works</a></li>
+    <li><a href="#inside">What's inside</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a class="web" href="webinar.html">Free webinar</a></li>
+  </ul>
+  <a class="btn btn-ink btn-sm buy" href="#pricing">Start for $297/mo</a>
+</nav>
+
+<main id="top">
+
+<!-- Hero -->
+<header class="hero" id="hero">
+  <div class="orbs" aria-hidden="true"><span class="orb s"></span><span class="orb b"></span><span class="orb y"></span></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">For business owners done paying an agency</span>
+      <h1>Fire your <span class="hl">agency.</span></h1>
+      <p class="lede">Make and launch your own Facebook and Instagram ads with AI, from one simple tool. Bring it all in-house for $297 a month.</p>
+      <div class="hero-actions">
+        <a class="btn btn-accent btn-lg buy" href="#pricing">Start for $297/mo</a>
+        <a class="btn btn-link web" href="webinar.html">Watch the free webinar</a>
+      </div>
+      <div class="hero-meta"><span>No setup fee</span><span>Instant access</span><span>Straight into the ad launcher</span></div>
+    </div>
+    <div>
+      <div class="win glass" aria-label="Example: an ad made and launched in the ad launcher">
+        <div class="win-bar"><span class="t"><img src="{{img:mark.png}}" alt="" width="192" height="205"><span>Ad launcher · Harbor Plumbing</span></span><span class="tag g">Live</span></div>
+        <div class="win-body">
+          <div class="ad">
+            <div class="ad-top"><span class="ad-av">HP</span><span><b>Harbor Plumbing</b><small>Sponsored</small></span></div>
+            <p class="ad-copy">Water heater out? We'll have a plumber at your door today, with an upfront price before we start.</p>
+            <div class="ad-img"><b>Hot water back on today.</b></div>
+            <div class="ad-foot"><span>Same-day call-outs</span><b>Get a quote</b></div>
+          </div>
+        </div>
+        <div class="toast two"><i style="background:var(--primary-strong);box-shadow:0 0 0 4px rgba(53,110,198,.15)"></i><span>Written by AI<small>from your website</small></span></div>
+        <div class="toast"><i></i><span>New lead · Maria Lopez<small>Water heater · 2 min ago</small></span></div>
+      </div>
+      <p class="note" style="margin-top:36px;text-align:center">Example account, shown for illustration.</p>
+    </div>
+  </div>
+</header>
+
+<!-- What the agency costs -->
+<section class="sec band" id="cost">
+  <div class="wrap">
+    <div class="cost">
+      <div>
+        <div class="stack-sm"><span class="eyebrow">Do the maths</span><h2 class="h2">What your agency really costs.</h2></div>
+        <p class="lede" style="margin-top:18px">Slide in your own numbers. Your ad budget goes to Meta either way. This is only what you pay someone to press the buttons.</p>
+        <div class="sliders">
+          <div class="sl"><label for="c-ret">Monthly retainer <output id="o-ret" for="c-ret">$2,500</output></label><input type="range" id="c-ret" min="500" max="10000" step="250" value="2500"></div>
+          <div class="sl"><label for="c-spend">Monthly ad spend <output id="o-spend" for="c-spend">$10,000</output></label><input type="range" id="c-spend" min="1000" max="100000" step="1000" value="10000"></div>
+          <div class="sl"><label for="c-fee">Their cut of ad spend <output id="o-fee" for="c-fee">10%</output></label><input type="range" id="c-fee" min="0" max="20" step="1" value="10"></div>
+        </div>
+      </div>
+      <div class="bill glass" aria-live="polite">
+        <span class="eyebrow">Per year</span>
+        <div class="bill-row" style="margin-top:10px"><span>Agency retainer</span><span id="b-ret">$30,000</span></div>
+        <div class="bill-row"><span>Their cut of your ad spend</span><span id="b-fee">$12,000</span></div>
+        <div class="bill-row total"><span>Agency total</span><span id="b-total">$42,000</span></div>
+        <div class="bill-us"><span>Selling with Social<br><span class="note" style="color:var(--navy-ink-2)">$297 × 12, no setup fee</span></span><b>$3,564</b></div>
+        <div class="keep"><span class="eyebrow">You keep</span><b id="b-keep">$38,436</b><span class="note">a year, before a single extra lead.</span></div>
+      </div>
+    </div>
+    <div class="pains">
+      <div><b>You pay before you see a lead.</b><p>The retainer lands every month, whether the phone rings or not.</p></div>
+      <div><b>A new ad takes a week.</b><p>Brief, wait, revise, wait. By then the offer has changed.</p></div>
+      <div><b>They hold the keys.</b><p>The ad account, the data and the know-how sit with them, not you.</p></div>
+      <div><b>You get a report.</b><p>Clicks and impressions, when what you wanted was customers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOLD · the ad launcher -->
+<section class="hold" id="launcher" data-hold="launcher" aria-label="How the ad launcher works">
+  <div class="pin">
+    <div class="orbs" aria-hidden="true"><span class="orb b"></span><span class="orb y"></span></div>
+    <div class="wrap lz">
+      <div>
+        <span class="eyebrow">The ad launcher</span>
+        <h2 class="h2" style="margin-top:14px;font-size:clamp(28px,3.4vw,42px)">From your website to a live ad in four steps.</h2>
+        <div class="lsteps" id="lsteps">
+          <button type="button" class="lstep on"><span class="n">01</span><span class="tx"><b>Connect your pages</b><span class="d">Link your Facebook page, Instagram and ad account once.</span></span></button>
+          <button type="button" class="lstep"><span class="n">02</span><span class="tx"><b>Paste your website</b><span class="d">The AI reads what you sell, where you work and how you talk.</span></span></button>
+          <button type="button" class="lstep"><span class="n">03</span><span class="tx"><b>Pick your ads</b><span class="d">It writes the ads. You choose the ones you like and edit anything.</span></span></button>
+          <button type="button" class="lstep"><span class="n">04</span><span class="tx"><b>Set a budget and launch</b><span class="d">Choose a daily spend and go live. Leads land in your inbox.</span></span></button>
+        </div>
+        <div class="lcap stack-sm" id="lcap" style="display:none;margin-top:14px;gap:2px"><b style="font:600 19px/25px var(--font-display)">Connect your pages</b><span class="note" style="font-size:14.5px">Link your Facebook page, Instagram and ad account once.</span></div>
+      </div>
+      <div class="win glass lwin">
+        <div class="win-bar"><span class="t"><img src="{{img:mark.png}}" alt="" width="192" height="205"><span>Ad launcher · Harbor Plumbing</span></span><span class="tag" id="lstat">Step 1 of 4</span></div>
+        <div class="win-body">
+          <div class="scr on">
+            <h4>Connect your pages</h4><p>One sign-in. Your account stays yours.</p>
+            <div class="row"><span>Facebook page</span><b><span class="v">Harbor Plumbing</span> <span class="tag g" style="margin-left:6px">Connected</span></b></div>
+            <div class="row"><span>Instagram</span><b><span class="v">@harborplumbing</span> <span class="tag g" style="margin-left:6px">Connected</span></b></div>
+            <div class="row"><span>Ad account</span><b><span class="v">Yours</span> <span class="tag g" style="margin-left:6px">Connected</span></b></div>
+          </div>
+          <div class="scr">
+            <h4>Paste your website</h4><p>The AI reads your site so the ads sound like you.</p>
+            <div class="urlbar">harborplumbing.com</div>
+            <div class="found">
+              <div><small>What you sell</small><b>Water heaters, drains, re-pipes</b></div>
+              <div><small>Where you work</small><b>15 miles around your shop</b></div>
+              <div><small>How you talk</small><b>Friendly, straight-talking</b></div>
+              <div><small>Your offer</small><b>Same-day call-outs</b></div>
+            </div>
+          </div>
+          <div class="scr">
+            <h4>Pick your ads</h4><p>Three to start. Edit any word, or ask for more.</p>
+            <div class="ads3">
+              <div class="ad" id="pick"><span class="tag n" hidden>Picked</span><div class="ad-img"><b>Hot water back on today.</b></div><p class="ad-copy">Water heater out? A plumber at your door today.</p></div>
+              <div class="ad"><div class="ad-img alt"><b>Blocked drain? Sorted in an hour.</b></div><p class="ad-copy">Upfront price before we start. No surprises.</p></div>
+              <div class="ad"><div class="ad-img warm"><b>The plumber your neighbours call.</b></div><p class="ad-copy">Local, licensed and on time.</p></div>
+            </div>
+          </div>
+          <div class="scr">
+            <h4>Set a budget and launch</h4><p>Change it or pause it any time.</p>
+            <div class="row"><span>Daily budget</span><b>$40 a day</b></div>
+            <div class="row"><span>Who sees it</span><b>Homeowners within 15 miles</b></div>
+            <div class="launchbar" id="lbar"><b>Hot water back on today.</b><span class="go" id="lgo">Launch</span></div>
+            <div class="toast" id="ltoast"><i></i><span>New lead · Maria Lopez<small>Water heater · sent to your phone</small></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prog" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<!-- What's inside -->
+<section class="sec band" id="inside">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">What's inside</span><h2 class="h2">Everything your agency did, in one place you own.</h2></div>
+    <div class="bento rv">
+      <article class="tile feature"><span class="tag">The main event</span><h3>The ad launcher</h3><p>Make an ad and put it live on Facebook and Instagram in four steps, without ever opening Ads Manager.</p></article>
+      <article class="tile w3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><h3>AI that writes your ads</h3><p>Headlines, copy and creative written from your own website, in your own voice. You approve every word.</p></article>
+      <article class="tile"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></svg></span><h3>Tracking that finds buyers</h3><p>Tells Meta which leads became customers, so it looks for more of them.</p></article>
+      <article class="tile"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><h3>Instant lead alerts</h3><p>A new lead pings your phone and gets a reply in seconds, while they're still interested.</p></article>
+      <article class="tile"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="5" height="16" rx="1.5"/><rect x="10" y="4" width="5" height="11" rx="1.5"/><rect x="17" y="4" width="4" height="7" rx="1.5"/></svg></span><h3>Every lead in one place</h3><p>One inbox, one pipeline and one calendar, so nobody slips through.</p></article>
+      <article class="tile w3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></span><h3>Wake up your old list</h3><p>Import past customers and old enquiries, then send one campaign to bring them back.</p></article>
+      <article class="tile w3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><h3>Live training every week</h3><p>We build and launch real ads on a free live webinar, and show what's working right now.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Better leads (dark) -->
+<section class="sec dark curtain" id="signal" data-curtain data-view="signal">
+  <div class="orbs" aria-hidden="true"><span class="orb b"></span><span class="orb y"></span></div>
+  <div class="wrap signal">
+    <div class="stack-md">
+      <div class="stack-sm"><span class="eyebrow">Better leads</span><h2 class="h2">Meta learns who actually buys from you.</h2></div>
+      <p class="lede" style="color:var(--navy-ink-2)">Meta finds more people like the ones you tell it about. Most ad accounts only tell it who filled in a form. Yours tells it who replied, who qualified and who paid, so it goes looking for buyers, not form-fillers.</p>
+      <div><a class="btn btn-accent buy" href="#pricing">Start for $297/mo</a></div>
+    </div>
+    <div class="pipe glass-dark" id="pipe" aria-label="Example: each step a lead takes is sent back to Meta">
+      <div class="stage on"><span><b>New lead</b><small>Filled in your form</small></span><span class="sent">Sent to Meta</span></div>
+      <div class="stage"><span><b>Interested</b><small>Replied to your text</small></span><span class="sent">Sent to Meta</span></div>
+      <div class="stage"><span><b>Qualified</b><small>Right job, right area</small></span><span class="sent">Sent to Meta</span></div>
+      <div class="stage"><span><b>Customer</b><small>Paid</small></span><span class="sent">Sent to Meta</span></div>
+      <p class="note">Example pipeline. This tracking is built into the tool.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Agency vs in-house -->
+<section class="sec" id="compare">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Agency vs in-house</span><h2 class="h2">Same ads. Without the middleman.</h2></div>
+    <div class="cmp rv" role="table" aria-label="Agency compared with running ads in-house">
+      <div class="cmp-row cmp-head" role="row"><span role="columnheader"></span><span role="columnheader">With an agency</span><span role="columnheader">In-house with Selling with Social</span></div>
+      <div class="cmp-row" role="row"><span role="rowheader">What you pay</span><span role="cell">A monthly retainer, often plus a cut of your ad spend</span><span role="cell">$297 a month, flat</span></div>
+      <div class="cmp-row" role="row"><span role="rowheader">A new ad</span><span role="cell">Brief it, wait, revise</span><span role="cell">Made and live in minutes</span></div>
+      <div class="cmp-row" role="row"><span role="rowheader">Your ad account</span><span role="cell">Often set up under theirs</span><span role="cell">Yours from day one</span></div>
+      <div class="cmp-row" role="row"><span role="rowheader">Your leads</span><span role="cell">In next month's report</span><span role="cell">On your phone as they happen</span></div>
+      <div class="cmp-row" role="row"><span role="rowheader">Commitment</span><span role="cell">Often a multi-month contract</span><span role="cell">Month to month</span></div>
+    </div>
+    <div class="fits"><b>Works for</b><span>HVAC</span><span>Plumbing</span><span>Solar</span><span>Garage doors</span><span>Law firms</span><span>Accountants</span><span>Restaurants</span><span>Coaches</span><span>Online stores</span></div>
+  </div>
+</section>
+
+<!-- Founders -->
+<section class="sec band">
+  <div class="wrap founders">
+    <div class="ph rv"><div><span><b>Kai</b><small>Co-founder</small></span></div><div><span><b>Alan</b><small>Co-founder</small></span></div></div>
+    <div class="stack-md rv">
+      <div class="stack-sm"><span class="eyebrow">Who's behind this</span><h2 class="h2">Built by two owners who run their own ads.</h2></div>
+      <p class="lede">Alan runs two legal businesses in Sydney and an insulation business in the US. Kai runs e-commerce brands. We use this same tool on our own ad accounts, and we show what's working on the live webinar every week.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing (dark) -->
+<section class="sec dark curtain" id="pricing" data-curtain>
+  <div class="orbs" aria-hidden="true"><span class="orb y"></span><span class="orb b"></span></div>
+  <div class="wrap pricing">
+    <div class="stack-md">
+      <div class="stack-sm"><span class="eyebrow">Pricing</span><h2 class="h2">One plan. Everything in it.</h2></div>
+      <p class="lede" style="color:var(--navy-ink-2)">No setup fee and no onboarding call to wait for. Sign up and you're inside the ad launcher in minutes.</p>
+      <span class="powered" style="color:var(--navy-ink-2)">Powered by <b style="color:#fff">HighLevel</b></span>
+    </div>
+    <div class="plan glass-dark" id="plan">
+      <div class="plan-top"><div class="price"><b>$297</b><small>/month</small></div><span class="tag y">No setup fee</span></div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Ad launcher for Facebook and Instagram</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>AI that writes your ad copy and creative</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Tracking that tells Meta who became a customer</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Instant lead alerts and replies</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Inbox, pipeline and calendar</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Campaigns to wake up your old list</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Free live training every week</li>
+      </ul>
+      <a class="btn btn-accent btn-lg buy" href="#pricing">Start for $297/mo</a>
+      <p class="note">Instant access. Your ad budget is paid straight to Meta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Webinar -->
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="wb glass rv">
+      <div><span class="eyebrow">Free live webinar</span><h2 style="margin-top:12px">Want to watch us do it first?</h2><p>Every week we build and launch real ads live, start to finish. You'll leave able to run your own, with our tool or without it.</p></div>
+      <a class="btn btn-ink web" href="webinar.html">Save my seat</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap narrow">
+    <div class="head"><span class="eyebrow">FAQ</span><h2 class="h2">Questions, answered.</h2></div>
+    <div class="faq">
+      <details open><summary>Do I need to know how to run ads?<i></i></summary><div class="a">No. The launcher takes you through four steps and the AI writes the ads from your website. If you can post on Facebook, you can do this.</div></details>
+      <details><summary>Is there really no setup fee?<i></i></summary><div class="a">Yes. It's $297 a month. You sign up, get instant access and go straight into the ad launcher.</div></details>
+      <details><summary>What do I pay for the ads themselves?<i></i></summary><div class="a">Your ad budget goes directly to Meta from your own ad account. You choose the daily amount and can change or pause it any time. Texts, calls and emails sent from the tool are billed by usage.</div></details>
+      <details><summary>Do you run my ads for me?<i></i></summary><div class="a">No, and that's the point. We're not an agency. You run your own ads with a tool that makes it simple, and we show you what's working on the live webinar every week.</div></details>
+      <details><summary>How is this different from signing up to HighLevel directly?<i></i></summary><div class="a">Selling with Social is powered by HighLevel. You get it set up for one job, running your own ads, plus our live training every week.</div></details>
+      <details><summary>Can I cancel?<i></i></summary><div class="a">Yes. It's month to month.</div></details>
+      <details><summary>Will it work for my kind of business?<i></i></summary><div class="a">If your customers are on Facebook or Instagram, yes. Owners use it for trades, local services, professional firms, restaurants, coaching and online stores.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- Final -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="final rv">
+      <h2>Fire your agency. Keep the leads.</h2>
+      <a class="btn btn-ink btn-lg buy" href="#pricing">Start for $297/mo</a>
+      <p class="note">No setup fee. Instant access.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+{{> footer.html}}
+
+<div class="mbar glass" id="mbar" aria-hidden="true"><span><b>$297/mo</b><small>No setup fee</small></span><a class="btn btn-accent btn-sm buy" href="#pricing" tabindex="-1">Start now</a></div>
+
+<script>
+(function(){
+{{> config.js}}
+{{> index.js}}
+})();
+</script>
+</body>
+</html>

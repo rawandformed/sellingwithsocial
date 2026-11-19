@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Webinar | Selling with Social</title>
+<meta name="description" content="Free live webinar: how to fire your agency and run your own Facebook and Instagram ads with AI.">
+<meta property="og:title" content="Free webinar: fire your agency and run your own ads with AI">
+<link rel="icon" href="{{img:mark.png}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+<!-- Meta Pixel: paste the base code here (see README) -->
+<style>
+{{> base.css}}
+{{> funnel.css}}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <a class="logo" href="index.html" aria-label="Selling with Social home"><img class="std" src="{{img:logo.png}}" alt="Selling with Social" width="360" height="169"></a>
+  <span class="tag y">Free live webinar</span>
+</header>
+
+<main class="page">
+  <div class="orbs" aria-hidden="true"><span class="orb s"></span><span class="orb b"></span><span class="orb y"></span></div>
+  <div class="wrap reg">
+    <div class="intro">
+      <span class="eyebrow">Free live webinar</span>
+      <h1>Fire your agency. Run your own ads <span class="hl">with AI.</span></h1>
+      <p class="lede">We build and launch a real Facebook and Instagram ad live, start to finish, then show you how to turn the leads into customers.</p>
+      <span class="when" id="when">Live online. Date and time arrive by email.</span>
+    </div>
+    <ul class="learn">
+        <li><span class="n">01</span><span><b>Launch an ad in minutes</b><span>From your website to a live ad, without opening Ads Manager.</span></span></li>
+        <li><span class="n">02</span><span><b>Teach Meta who buys</b><span>The tracking most accounts skip, and why it brings better leads.</span></span></li>
+        <li><span class="n">03</span><span><b>Reply before they go cold</b><span>How to answer every new lead in seconds, even when you're on a job.</span></span></li>
+        <li><span class="n">04</span><span><b>Wake up your old list</b><span>One campaign to bring back past customers and old enquiries.</span></span></li>
+    </ul>
+    <form class="form glass" id="reg" novalidate>
+      <h2>Save my seat</h2>
+      <div class="field"><label for="f-name">First name</label><input id="f-name" name="first_name" autocomplete="given-name" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+      <div class="field"><label for="f-phone">Mobile</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div class="msg" id="msg" role="status" hidden></div>
+      <button class="btn btn-accent btn-lg" type="submit" id="go">Save my seat</button>
+      <p class="note">Free. We'll email and text you the link and a reminder.</p>
+    </form>
+  </div>
+</main>
+
+{{> footer.html}}
+
+<script>
+(function(){
+{{> config.js}}
+  var d = document, form = d.getElementById('reg'), msg = d.getElementById('msg'), go = d.getElementById('go');
+  if (SWS.NEXT_WEBINAR) d.getElementById('when').textContent = 'Live online · ' + SWS.NEXT_WEBINAR;
+  function say(text, kind) { msg.textContent = text; msg.className = 'msg ' + kind; msg.hidden = false; }
+  if (!SWS.WEBINAR_WEBHOOK) say('Registration is not connected yet. Nothing you enter here will be saved.', 'warn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.first_name.value.trim(), email = form.email.value.trim(), phone = form.phone.value.trim();
+    if (!name || !/^\S+@\S+\.\S+$/.test(email) || phone.replace(/\D/g, '').length < 7) {
+      say('Please add your first name, a valid email and a mobile number.', 'err'); return;
+    }
+    if (!SWS.WEBINAR_WEBHOOK) { say('Registration is not connected yet, so you have not been registered.', 'warn'); return; }
+    go.disabled = true; go.textContent = 'Saving your seat';
+    var body = new URLSearchParams({ first_name: name, email: email, phone: phone, source: 'webinar-page' });
+    fetch(SWS.WEBINAR_WEBHOOK, { method: 'POST', mode: 'no-cors', body: body })
+      .then(function () { window.location.href = SWS.THANK_YOU_URL; })
+      .catch(function () {
+        go.disabled = false; go.textContent = 'Save my seat';
+        say('That did not go through. Check your connection and try again.', 'err');
+      });
+  });
+})();
+</script>
+</body>
+</html>
