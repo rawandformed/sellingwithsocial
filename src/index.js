@@ -26,31 +26,6 @@
   }
   if (ret) { [ret, spend, fee].forEach(function (el) { el.addEventListener('input', calc); }); calc(); }
 
-  /* Launcher */
-  var steps = $$('#lsteps .lstep'), scrs = $$('#launcher .scr');
-  var lstat = $('#lstat'), lcap = $('#lcap'), pick = $('#pick'), lbar = $('#lbar'), lgo = $('#lgo'), ltoast = $('#ltoast');
-  var cur = -1;
-  function launcher(p) {
-    var x = Math.min(3.999, p * 4), i = Math.floor(x), local = x - i;
-    if (i !== cur) {
-      cur = i;
-      steps.forEach(function (s, k) { s.classList.toggle('on', k === i); s.setAttribute('aria-current', k === i ? 'step' : 'false'); });
-      scrs.forEach(function (s, k) { s.classList.toggle('on', k === i); });
-      if (lcap) {
-        lcap.firstElementChild.textContent = $('b', steps[i]).textContent;
-        lcap.lastElementChild.textContent = $('.d', steps[i]).textContent;
-      }
-    }
-    var picked = i > 2 || (i === 2 && local > .4);
-    pick.classList.toggle('pick', picked);
-    $('.tag', pick).hidden = !picked;
-    var live = i === 3 && local > .4;
-    lbar.classList.toggle('live', live);
-    lgo.textContent = live ? 'Live' : 'Launch';
-    ltoast.classList.toggle('in', i === 3 && local > .68);
-    lstat.textContent = live ? 'Live' : 'Step ' + (i + 1) + ' of 4';
-    lstat.className = 'tag' + (live ? ' g' : '');
-  }
   /* Problem hold: a month with an agency */
   var gapEl = $('#gap'), tlRows = $$('#tl div'), gday = $('#gday'), gads = $('#gads'), ginv = $('#ginv'), glabel = $('#glabel');
   var GDAY = [1, 3, 10, 17, 30];
@@ -73,27 +48,18 @@
     if (i === fcur) return; fcur = i;
     fbtns.forEach(function (b, k) { b.classList.toggle('on', k === i); b.setAttribute('aria-selected', k === i ? 'true' : 'false'); });
     fpanels.forEach(function (s, k) { s.classList.toggle('on', k === i); });
-    fcount.textContent = ('0' + (i + 1)).slice(-2) + ' / ' + ('0' + fpanels.length).slice(-2) + ' · ' + $('h3', fpanels[i]).textContent;
+    fcount.textContent = ('0' + (i + 1)).slice(-2) + ' / ' + ('0' + fpanels.length).slice(-2) + ' · ' + fbtns[i].lastChild.textContent;
   }
   fbtns.forEach(function (b, k) {
     b.addEventListener('click', function () {
-      var h = $('#features'), range = h.offsetHeight - w.innerHeight;
+      var h = $('#how'), range = h.offsetHeight - w.innerHeight;
       if (reduced || range <= 0) return;
       w.scrollTo({ top: h.getBoundingClientRect().top + w.pageYOffset + range * (k + .5) / fbtns.length, behavior: 'smooth' });
     });
   });
 
-  var H = { launcher: launcher, gap: gap, feat: feat };
+  var H = { gap: gap, feat: feat };
   var holds = $$('[data-hold]');
-
-  steps.forEach(function (b, k) {
-    b.addEventListener('click', function () {
-      var h = $('#launcher');
-      var range = h.offsetHeight - w.innerHeight;
-      if (reduced || range <= 0) return;
-      w.scrollTo({ top: h.getBoundingClientRect().top + w.pageYOffset + range * (k + .5) / 4, behavior: 'smooth' });
-    });
-  });
 
   /* Signal pipeline, curtains, nav, mobile bar */
   var stages = $$('#pipe .stage'), pipe = $('#pipe');
@@ -134,12 +100,6 @@
   }
 
   if (reduced) {
-    /* No holds: every screen is laid out in the page, shown in its finished state. */
-    scrs.forEach(function (s) { s.classList.add('on'); });
-    steps.forEach(function (s) { s.classList.add('on'); });
-    pick.classList.add('pick'); $('.tag', pick).hidden = false;
-    lbar.classList.add('live'); lgo.textContent = 'Live'; ltoast.classList.add('in');
-    lstat.textContent = '4 steps';
     stages.forEach(function (s) { s.classList.add('on'); });
     gap(1); tlRows.forEach(function (r) { r.classList.remove('cur'); });
     gapEl.style.setProperty('--p', 1);

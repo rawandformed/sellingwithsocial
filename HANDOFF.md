@@ -2,28 +2,24 @@
 
 ## Positioning
 
-- The product is Selling with Social: run your own Facebook and Instagram ads in-house.
 - Every page leads with **Fire your agency.**
-- It is a CRM powered by HighLevel with our layer on top. The page sells both: HighLevel's platform (inbox, pipeline, calendar, follow-up, campaigns, tracking) in plain words, and what only we add (ad launcher, AI ads, video scripts and ideas, weekly live training).
-- The ad launcher is the hero. Everything else comes second.
-- Price is **$297 a month, no setup fee**, but it is never shown up front. The page sells first: the price first appears in the cost calculator directly above the pricing section. Everything before that says "Get started".
-- Buyers get instant access and land in the ad launcher. No "book a call".
+- The promise: everything an agency does, brought in-house in one mostly hands-off system. Six jobs: ideas, creating, scripting, launching, managing, maintaining.
+- Never sell it as "AI". It is "the system". The word AI does not appear on the site.
+- The main button is "Show me how", which leads into the six-step story.
+- Price is **$297 a month, no setup fee**, shown only at the bottom (calculator, then pricing).
+- Keep it light on text: one short line and one visual per step.
 
-## Page order (same sell-through as the previous site)
+## Page order
 
 1. Hero: the promise, no price.
-2. The problem (scroll hold): a month with an agency, day 1 to day 30.
-3. The fix (scroll hold): the ad launcher in four steps.
-4. After the click (scroll hold): the platform, seven things that turn a lead into a customer.
-5. Only with Selling with Social (dark): what we add on top of HighLevel.
-6. Made for how you work: example headlines by industry.
-7. The process: three steps.
-8. Agency vs in-house table.
-9. Founders.
-10. Cost calculator, then pricing (dark, glass card).
-11. Webinar, FAQ, final call to action.
+2. The problem (scroll hold): a month with an agency.
+3. How to fire your agency (scroll hold): the six jobs, one at a time.
+4. Agency vs in-house table.
+5. Founders.
+6. Cost calculator, then pricing (dark, glass card).
+7. Webinar, FAQ, final button.
 
-Each section makes one point once. Do not explain how it works in more than one place (the launcher hold owns that).
+Parked for later: a free "see your ads" lead magnet in the hero.
 
 ## Copy rules
 
@@ -38,7 +34,8 @@ Each section makes one point once. Do not explain how it works in more than one 
 - Month to month, cancel any time (comparison table, FAQ).
 - Texts, calls and emails billed by usage (FAQ).
 - The plan's feature list matches what the $297 plan actually unlocks.
-- The four launcher steps match the real ad launcher flow.
+- The system really does all six jobs at launch, including weekly ideas and video scripts.
+- "Mostly hands-off" is a fair description (the owner still approves ads and films videos).
 - Founder line: Alan runs two legal businesses in Sydney and an insulation business in the US; Kai runs e-commerce brands.
 - "Live training every week" matches the real webinar schedule.
 - "Video scripts and ideas" exists in the product at launch.
@@ -52,7 +49,7 @@ SWS Design System V1, Palette A.
 - Type: Bricolage Grotesque bold for headlines, Figtree for text and labels, Geist Mono for numbers only.
 - Yellow highlight bar under a word on light backgrounds; on navy use yellow text with no bar.
 - Space: off-white base, white bands with hairline borders, 1080px column, 120px section padding, 20px card radius.
-- Glass cards sit over soft blurred glows. Three sections pin while you scroll (problem, ad launcher, what's inside); with reduced motion they lay out as normal sections showing every step.
+- Glass cards sit over soft blurred glows. Two sections pin while you scroll (the problem, and the six jobs); with reduced motion they lay out as normal sections showing every step.
 
 ## Technical rules
 
