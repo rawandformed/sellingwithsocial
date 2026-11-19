@@ -181,8 +181,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .inds div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--card-shadow);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
 .inds small{font:700 12px var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--primary-strong)}
 .inds b{font:650 22px/28px var(--font-display);letter-spacing:-.015em}
-#after .orb.b{width:560px;height:560px;right:-140px;top:-10%;opacity:.3}
-#after .orb.y{width:340px;height:340px;left:-80px;bottom:-140px;opacity:.16}
+#only .orb.b{width:560px;height:560px;right:-140px;top:-10%;opacity:.3}
+#only .orb.y{width:340px;height:340px;left:-80px;bottom:-140px;opacity:.16}
 .acards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .acards div{border-radius:var(--r-card);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
 .acards .mono{color:var(--accent)}
@@ -262,6 +262,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .plan ul{list-style:none;margin:26px 0;padding:0;display:grid;gap:0}
 .plan li{display:grid;grid-template-columns:22px 1fr;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.1);font-size:15.5px;line-height:23px;color:#fff}
 .plan li svg{width:18px;height:18px;margin-top:3px;color:var(--accent)}
+.also{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:22px}
+.also b{font:700 12px var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--navy-ink-2);width:100%;margin-bottom:4px}
+.also span{font:500 13px var(--font-sans);padding:5px 11px;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,.16);color:#fff}
+.plan ul{margin-bottom:18px}
 .plan .btn{width:100%}
 .plan .note{text-align:center;margin-top:14px}
 

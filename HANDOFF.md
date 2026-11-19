@@ -4,7 +4,8 @@
 
 - The product is Selling with Social: run your own Facebook and Instagram ads in-house.
 - Every page leads with **Fire your agency.**
-- The ad launcher is the hero of the product. Everything else (tracking, instant replies, reactivating an old list, weekly training) supports it and comes second.
+- It is a CRM powered by HighLevel with our layer on top. The page sells both: HighLevel's platform (inbox, pipeline, calendar, follow-up, campaigns, tracking) in plain words, and what only we add (ad launcher, AI ads, video scripts and ideas, weekly live training).
+- The ad launcher is the hero. Everything else comes second.
 - Price is **$297 a month, no setup fee**, but it is never shown up front. The page sells first: the price first appears in the cost calculator directly above the pricing section. Everything before that says "Get started".
 - Buyers get instant access and land in the ad launcher. No "book a call".
 
@@ -13,8 +14,8 @@
 1. Hero: the promise, no price.
 2. The problem (scroll hold): a month with an agency, day 1 to day 30.
 3. The fix (scroll hold): the ad launcher in four steps.
-4. What's inside (scroll hold): seven features, one at a time.
-5. Better leads (dark): tracking that tells Meta who buys.
+4. After the click (scroll hold): the platform, seven things that turn a lead into a customer.
+5. Only with Selling with Social (dark): what we add on top of HighLevel.
 6. Made for how you work: example headlines by industry.
 7. The process: three steps.
 8. Agency vs in-house table.
@@ -40,6 +41,8 @@ Each section makes one point once. Do not explain how it works in more than one 
 - The four launcher steps match the real ad launcher flow.
 - Founder line: Alan runs two legal businesses in Sydney and an insulation business in the US; Kai runs e-commerce brands.
 - "Live training every week" matches the real webinar schedule.
+- "Video scripts and ideas" exists in the product at launch.
+- Every platform feature named (missed-call text back, review requests, invoices, social scheduler, mobile app) is switched on in the $297 plan.
 
 ## Design
 
