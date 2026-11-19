@@ -51,7 +51,39 @@
     lstat.textContent = live ? 'Live' : 'Step ' + (i + 1) + ' of 4';
     lstat.className = 'tag' + (live ? ' g' : '');
   }
-  var H = { launcher: launcher };
+  /* Problem hold: a month with an agency */
+  var gapEl = $('#gap'), tlRows = $$('#tl div'), gday = $('#gday'), gads = $('#gads'), ginv = $('#ginv'), glabel = $('#glabel');
+  var GDAY = [1, 3, 10, 17, 30];
+  var HEAT = [['Retainer paid', '#e0a21a'], ['In the queue', '#e0a21a'], ['Still waiting', '#e07a2a'], ['Live, a week late', '#de6030'], ['Invoiced again', '#d9483b']];
+  function gap(p) {
+    var x = Math.min(4.999, p * 5), st = Math.floor(x), f = x - st;
+    var day = st < 4 ? GDAY[st] + (GDAY[st + 1] - GDAY[st]) * f * .8 : 30;
+    gday.textContent = ('0' + Math.round(day)).slice(-2);
+    gads.textContent = st >= 3 ? '1' : '0';
+    ginv.textContent = st >= 4 ? '2' : '1';
+    glabel.textContent = HEAT[st][0];
+    gapEl.style.setProperty('--heat', HEAT[st][1]);
+    tlRows.forEach(function (r, k) { r.classList.toggle('on', k <= st); r.classList.toggle('cur', k === st); });
+  }
+
+  /* Features hold */
+  var fbtns = $$('#flist .fbtn'), fpanels = $$('#fstage .fpanel'), fcount = $('#fcount'), fcur = -1;
+  function feat(p) {
+    var i = Math.min(fpanels.length - 1, Math.floor(p * fpanels.length));
+    if (i === fcur) return; fcur = i;
+    fbtns.forEach(function (b, k) { b.classList.toggle('on', k === i); b.setAttribute('aria-selected', k === i ? 'true' : 'false'); });
+    fpanels.forEach(function (s, k) { s.classList.toggle('on', k === i); });
+    fcount.textContent = ('0' + (i + 1)).slice(-2) + ' / ' + ('0' + fpanels.length).slice(-2) + ' · ' + $('h3', fpanels[i]).textContent;
+  }
+  fbtns.forEach(function (b, k) {
+    b.addEventListener('click', function () {
+      var h = $('#features'), range = h.offsetHeight - w.innerHeight;
+      if (reduced || range <= 0) return;
+      w.scrollTo({ top: h.getBoundingClientRect().top + w.pageYOffset + range * (k + .5) / fbtns.length, behavior: 'smooth' });
+    });
+  });
+
+  var H = { launcher: launcher, gap: gap, feat: feat };
   var holds = $$('[data-hold]');
 
   steps.forEach(function (b, k) {
@@ -109,6 +141,9 @@
     lbar.classList.add('live'); lgo.textContent = 'Live'; ltoast.classList.add('in');
     lstat.textContent = '4 steps';
     stages.forEach(function (s) { s.classList.add('on'); });
+    gap(1); tlRows.forEach(function (r) { r.classList.remove('cur'); });
+    gapEl.style.setProperty('--p', 1);
+    fpanels.forEach(function (s) { s.classList.add('on'); });
     H = {};
     holds = [];
     pipe = null;

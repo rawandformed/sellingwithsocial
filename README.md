@@ -6,7 +6,7 @@ Marketing site for Selling with Social. One message: **Fire your agency.** Run y
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Landing page. Every buy button goes to checkout. |
+| `index.html` | Landing page. Sells problem to solution first; price appears only at the bottom. |
 | `webinar.html` | Free webinar registration. |
 | `thank-you.html` | Shown after registering. |
 

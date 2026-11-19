@@ -5,10 +5,23 @@
 - The product is Selling with Social: run your own Facebook and Instagram ads in-house.
 - Every page leads with **Fire your agency.**
 - The ad launcher is the hero of the product. Everything else (tracking, instant replies, reactivating an old list, weekly training) supports it and comes second.
-- Price is public: **$297 a month, no setup fee.** Buyers get instant access and land in the ad launcher.
-- Two calls to action only: **Start for $297/mo** (primary) and the **free webinar** (secondary). No "book a call".
+- Price is **$297 a month, no setup fee**, but it is never shown up front. The page sells first: the price first appears in the cost calculator directly above the pricing section. Everything before that says "Get started".
+- Buyers get instant access and land in the ad launcher. No "book a call".
 
-This replaces the earlier version of the site (speed to lead, no pricing, single "Book a call" button).
+## Page order (same sell-through as the previous site)
+
+1. Hero: the promise, no price.
+2. The problem (scroll hold): a month with an agency, day 1 to day 30.
+3. The fix (scroll hold): the ad launcher in four steps.
+4. What's inside (scroll hold): seven features, one at a time.
+5. Better leads (dark): tracking that tells Meta who buys.
+6. Made for how you work: example headlines by industry.
+7. The ad is only the start (dark): launch, reply, track, reactivate.
+8. The process: three steps.
+9. Agency vs in-house table.
+10. Founders.
+11. Cost calculator, then pricing (dark, glass card).
+12. Webinar, FAQ, final call to action.
 
 ## Copy rules
 
@@ -35,7 +48,7 @@ SWS Design System V1, Palette A.
 - Type: Bricolage Grotesque bold for headlines, Figtree for text and labels, Geist Mono for numbers only.
 - Yellow highlight bar under a word on light backgrounds; on navy use yellow text with no bar.
 - Space: off-white base, white bands with hairline borders, 1080px column, 120px section padding, 20px card radius.
-- Glass cards sit over soft blurred glows. Only the ad launcher section pins while you scroll; with reduced motion it lays out as a normal section showing every step.
+- Glass cards sit over soft blurred glows. Three sections pin while you scroll (problem, ad launcher, what's inside); with reduced motion they lay out as normal sections showing every step.
 
 ## Technical rules
 
