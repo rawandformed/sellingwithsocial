@@ -16,12 +16,13 @@
 4. What's inside (scroll hold): seven features, one at a time.
 5. Better leads (dark): tracking that tells Meta who buys.
 6. Made for how you work: example headlines by industry.
-7. The ad is only the start (dark): launch, reply, track, reactivate.
-8. The process: three steps.
-9. Agency vs in-house table.
-10. Founders.
-11. Cost calculator, then pricing (dark, glass card).
-12. Webinar, FAQ, final call to action.
+7. The process: three steps.
+8. Agency vs in-house table.
+9. Founders.
+10. Cost calculator, then pricing (dark, glass card).
+11. Webinar, FAQ, final call to action.
+
+Each section makes one point once. Do not explain how it works in more than one place (the launcher hold owns that).
 
 ## Copy rules
 
