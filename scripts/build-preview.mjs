@@ -40,10 +40,11 @@ const result = await build({
 });
 let js = result.outputFiles[0].text;
 
-// 3. Logos become data URIs so the file stands alone.
+// 3. Logos and photos become data URIs so the file stands alone.
 for (const f of readdirSync(join(root, "public/assets"))) {
   const data = readFileSync(join(root, "public/assets", f)).toString("base64");
-  js = js.replaceAll(`/assets/${f}`, `data:image/png;base64,${data}`);
+  const mime = f.endsWith(".jpg") ? "image/jpeg" : "image/png";
+  js = js.replaceAll(`/assets/${f}`, `data:${mime};base64,${data}`);
 }
 js = js.replaceAll("</script", "<\\/script");
 
