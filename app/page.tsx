@@ -1,6 +1,6 @@
 import { Footer } from "@/components/site/footer";
 import { Nav } from "@/components/site/nav";
-import { AgencyMonth } from "@/components/sections/agency-month";
+import { AgencyControl } from "@/components/sections/agency-control";
 import { Compare } from "@/components/sections/compare";
 import { Faq } from "@/components/sections/faq";
 import { Founders } from "@/components/sections/founders";
@@ -14,7 +14,7 @@ export default function Page() {
       <Nav />
       <main id="top">
         <Hero />
-        <AgencyMonth />
+        <AgencyControl />
         <SixJobs />
         <Compare />
         <Founders />

@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Selling with Social | Fire your agency",
   description:
-    "Fire your agency. Everything an agency does, brought in-house in one mostly hands-off system.",
+    "Fire your agency. The system does what your agency did, start to finish. You keep the fee.",
 };
 
 export const viewport: Viewport = {

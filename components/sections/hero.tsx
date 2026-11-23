@@ -27,7 +27,7 @@ export function Hero() {
               Fire your <span className="hl">agency.</span>
             </h1>
             <p className="max-w-[40ch] text-[18px] leading-7 text-ink-2 sm:text-[20px] sm:leading-[30px]">
-              Everything an agency does, brought <span className="whitespace-nowrap">in-house</span> in one mostly hands-off system.
+              The system does what your agency did, start to finish. You keep the fee.
             </p>
             <ButtonLink href="#story" className="mt-2">
               Show me how
