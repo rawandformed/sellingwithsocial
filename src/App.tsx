@@ -1,11 +1,12 @@
-import { Footer } from "@/components/site/footer";
-import { Nav } from "@/components/site/nav";
 import { Faq } from "@/components/sections/faq";
 import { Hero } from "@/components/sections/hero";
 import { Pricing } from "@/components/sections/pricing";
 import { Why } from "@/components/sections/why";
+import { Footer } from "@/components/site/footer";
+import { Nav } from "@/components/site/nav";
 
-export default function Page() {
+/* The whole site is one page. Sections are in src/components/sections. */
+export default function App() {
   return (
     <>
       <Nav />

@@ -1,11 +1,10 @@
-import Image from "next/image";
-
+import mark from "@/assets/mark.png";
 import { ExampleTag } from "@/components/ui/example-tag";
 import { cn } from "@/lib/utils";
 
 /*
   Example product screen for the hero frame, shown until a sales video is set
-  in lib/config.ts. A lead board: each column is a step, and leads move left to
+  in src/lib/config.ts. A lead board: each column is a step, and leads move left to
   right until they are booked. The business and the leads are made up.
 */
 
@@ -69,7 +68,7 @@ export function HeroBoard() {
     <div className="flex h-full flex-col text-left text-ink">
       <div className="flex items-center justify-between border-b border-line px-4 py-3 md:px-5">
         <div className="flex items-center gap-2.5">
-          <Image src="/assets/mark.png" alt="" width={192} height={205} className="h-6 w-auto" />
+          <img src={mark} alt="" width={192} height={205} className="h-6 w-auto" />
           <span className="font-display text-[15px] font-bold tracking-[-.01em]">Harbor Coaching</span>
         </div>
         <ExampleTag />

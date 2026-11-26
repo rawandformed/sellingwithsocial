@@ -2,7 +2,7 @@
 
 > **Note:** this document describes the original single-file site, now kept at
 > `reference/original-index.html` as the visual reference. The live site is being
-> rebuilt in Next.js. See `README.md` for the current structure.
+> now a React (Vite) app. See `README.md` for the current structure.
 
 Context for an AI assistant (e.g. Google AI Studio) or a developer picking up this repo. Read this first, then `index.html`.
 

@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 
@@ -13,7 +11,7 @@ import { cn } from "@/lib/utils";
   Pricing. The only place on the site that shows a price.
 
   Three glass cards, each with its own buy button. A buy button opens its
-  GoHighLevel order form. While that link is empty in lib/config.ts the button
+  GoHighLevel order form. While that link is empty in src/lib/config.ts the button
   stays on this section; nothing fakes a checkout.
 
   Below the cards sits the page's one dark accent: PeakChart, showing example
@@ -202,7 +200,7 @@ export function Pricing() {
               period={period}
               onPeriodChange={setPeriod}
               formatValue={(v) => `${Math.round(v)} leads`}
-              font="var(--font-figtree), system-ui, sans-serif"
+              font="Figtree, system-ui, sans-serif"
             />
           </div>
         </div>

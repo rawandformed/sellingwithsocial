@@ -91,9 +91,9 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-display: var(--font-bricolage), ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
-  --font-sans: var(--font-figtree), -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Bricolage Grotesque", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Figtree", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --radius-card: 20px;
   --container-col: 1080px;

@@ -1,8 +1,10 @@
 # Selling with Social · website
 
-Marketing site for Selling with Social (sellingwithsocial.com).
+Launch landing page for Selling with Social (sellingwithsocial.com).
 
-Next.js (App Router) + TypeScript + Tailwind CSS v4, shadcn folder structure, framer-motion.
+React + Vite + TypeScript + Tailwind CSS v4, shadcn folder structure, framer-motion. One page, no router.
+
+This branch (`ai-studio-vite`) is the Vite version, made for HighLevel AI Studio Git Sync. The Next.js version lives on `claude/launch-landing`.
 
 ## Run it
 
@@ -14,22 +16,27 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:3000.
+## Build
+
+```bash
+npm run build
+```
+
+The built site is written to `dist/`.
 
 ## Where things live
 
-- `app/` : layout, page and `globals.css` (brand tokens and the glass, eyebrow and highlight utilities).
-- `components/ui/` : shared UI pieces (shadcn structure).
-- `components/sections/` : one file per page section.
-- `components/site/` : nav and footer.
-- `lib/config.ts` : `CHECKOUT_URL`, `WEBINAR_URL`, `NEXT_WEBINAR`. All empty for now. While `CHECKOUT_URL` is empty the buy button scrolls to the offer section.
-- `public/assets/` : logos.
-- `reference/original-index.html` : the original single-file site. Kept as the visual reference for the port. Not served.
+- `index.html` : the page shell. Loads the fonts from Google Fonts and `src/main.tsx`.
+- `vite.config.ts` : Vite, React and Tailwind plugins, and the `@` alias for `src`.
+- `src/main.tsx`, `src/App.tsx` : entry point and the page.
+- `src/index.css` : Tailwind import, brand tokens, and the glass, eyebrow and highlight utilities.
+- `src/components/sections/` : one file per page section.
+- `src/components/ui/` : shared UI pieces (shadcn structure), including ContainerScroll and PeakChart.
+- `src/components/site/` : nav and footer.
+- `src/lib/config.ts` : checkout links, fees, video link and proof stats. Checkout links are empty for now; while a link is empty its Get started button stays on the pricing section.
+- `src/assets/` : logos.
+- `reference/original-index.html` : the original single-file site, kept as a visual reference. Not served.
 
 ## Brand
 
-SWS Design System V1, Palette A. Bricolage Grotesque (headlines), Figtree (text), Geist Mono (numbers only). Tokens are in `app/globals.css`.
-
-## Before writing Next.js code
-
-This project uses Next.js 16. Read the docs for the installed version in `node_modules/next/dist/docs/` first (see `AGENTS.md`).
+SWS Design System V1, Palette A. Bricolage Grotesque (headlines), Figtree (text), Geist Mono (numbers only). Tokens are in `src/index.css`.

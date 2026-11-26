@@ -1,9 +1,7 @@
-"use client";
-
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 
+import logoReversed from "@/assets/logo-reversed.png";
+import logo from "@/assets/logo.png";
 import { ButtonLink } from "@/components/ui/button";
 import { PRICING_ANCHOR } from "@/lib/config";
 import { cn } from "@/lib/utils";
@@ -52,16 +50,16 @@ export function Nav() {
         dark && "border-white/15 bg-[linear-gradient(140deg,rgba(255,255,255,.14),rgba(255,255,255,.05))]",
       )}
     >
-      <Link href="/#top" aria-label="Selling with Social" className="flex shrink-0 items-center">
-        <Image
-          src={dark ? "/assets/logo-reversed.png" : "/assets/logo.png"}
+      <a href="#top" aria-label="Selling with Social" className="flex shrink-0 items-center">
+        <img
+          src={dark ? logoReversed : logo}
           alt=""
           width={360}
           height={169}
           loading="eager"
           className="h-[38px] w-auto"
         />
-      </Link>
+      </a>
       <ul className="m-0 hidden list-none gap-[22px] p-0 min-[901px]:flex">
         {links.map((l) => (
           <li key={l.href}>
