@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { ExampleTag } from "@/components/ui/example-tag";
 import { PeakChart } from "@/components/ui/peak-chart";
-import { planAction, siteConfig, usd } from "@/lib/config";
+import { buyLink, siteConfig, usd } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
 /*
@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
   Three glass cards, each with its own buy button. A buy button opens its
   GoHighLevel order form. While that link is empty in lib/config.ts the button
-  becomes "Join the waitlist" and opens the waitlist form.
+  stays on this section; nothing fakes a checkout.
 
   Below the cards sits the page's one dark accent: PeakChart, showing example
   data that is labelled as an example.
@@ -27,7 +27,6 @@ type Tier = {
   per: string;
   then?: string;
   features: string[];
-  cta: string;
   url: string;
   note?: string;
   featured?: boolean;
@@ -40,7 +39,6 @@ const tiers: Tier[] = [
     price: usd(249),
     per: "/month",
     features: ["Your own account", "Every tool on this page", "The self-serve library"],
-    cta: "Buy Self-serve",
     url: siteConfig.CHECKOUT_249_URL,
   },
   {
@@ -49,7 +47,6 @@ const tiers: Tier[] = [
     price: usd(349),
     per: "/month",
     features: ["Everything in Self-serve", "24-hour support"],
-    cta: "Buy Supported",
     url: siteConfig.CHECKOUT_349_URL,
     featured: true,
   },
@@ -60,7 +57,6 @@ const tiers: Tier[] = [
     per: "one-off",
     then: `then ${usd(349)}/month`,
     features: ["Everything in Supported", "Your account set up for you", "An onboarding call"],
-    cta: "Buy Done with you",
     url: siteConfig.CHECKOUT_ONBOARDING_URL,
     note: "Buy, then book your onboarding call.",
   },
@@ -98,7 +94,6 @@ function useChartWidth() {
 }
 
 function TierCard({ t }: { t: Tier }) {
-  const action = planAction(t.url, t.cta);
   return (
     <div
       className={cn(
@@ -133,11 +128,11 @@ function TierCard({ t }: { t: Tier }) {
         </ul>
 
         <div className="mt-auto grid gap-3 pt-8">
-          <ButtonLink variant={action.kind === "buy" ? "buy" : "ink"} className="w-full" {...action.link}>
-            {action.label}
+          <ButtonLink variant="buy" className="w-full" {...buyLink(t.url)}>
+            Get started
           </ButtonLink>
           <p className="min-h-5 text-center text-[13px] font-medium leading-5 text-muted-foreground">
-            {action.kind === "buy" ? t.note : null}
+            {t.note}
           </p>
         </div>
       </div>

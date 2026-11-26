@@ -21,8 +21,6 @@ export const siteConfig = {
   INTAKE_FORM_URL: "",
   /** The self-serve library and community. */
   COMMUNITY_URL: "",
-  /** Waitlist form. Buy buttons go here while their checkout link is empty. */
-  WAITLIST_URL: "",
 } as const;
 
 /**
@@ -41,18 +39,12 @@ export const PRICING_ANCHOR = "#pricing";
 export const usd = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
 
 /**
- * What a plan's button does. With a checkout link it is a buy button that opens
- * the order form. Without one it is a waitlist button that opens the waitlist
- * form (or stays on pricing until WAITLIST_URL is set). It never fakes a checkout.
+ * Link props for a buy button: the real checkout in a new tab. While the
+ * checkout link is empty the button stays on the pricing section. It never
+ * fakes a checkout.
  */
-export function planAction(checkoutUrl: string, buyLabel: string) {
-  if (checkoutUrl) {
-    return { kind: "buy", label: buyLabel, link: { href: checkoutUrl, target: "_blank", rel: "noopener" } } as const;
-  }
-  const w = siteConfig.WAITLIST_URL as string;
-  return {
-    kind: "waitlist",
-    label: "Join the waitlist",
-    link: w ? { href: w, target: "_blank", rel: "noopener" } : { href: PRICING_ANCHOR },
-  } as const;
+export function buyLink(url: string) {
+  return url
+    ? ({ href: url, target: "_blank", rel: "noopener" } as const)
+    : ({ href: PRICING_ANCHOR } as const);
 }
