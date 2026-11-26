@@ -6,15 +6,15 @@ import { Check } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { ExampleTag } from "@/components/ui/example-tag";
 import { PeakChart } from "@/components/ui/peak-chart";
-import { buyLink, siteConfig, usd } from "@/lib/config";
+import { planAction, siteConfig, usd } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
 /*
   Pricing. The only place on the site that shows a price.
 
   Three glass cards, each with its own buy button. A buy button opens its
-  GoHighLevel order form; while that link is empty in lib/config.ts the button
-  stays on this section and the card says checkout is opening soon.
+  GoHighLevel order form. While that link is empty in lib/config.ts the button
+  becomes "Join the waitlist" and opens the waitlist form.
 
   Below the cards sits the page's one dark accent: PeakChart, showing example
   data that is labelled as an example.
@@ -51,6 +51,7 @@ const tiers: Tier[] = [
     features: ["Everything in Self-serve", "24-hour support"],
     cta: "Buy Supported",
     url: siteConfig.CHECKOUT_349_URL,
+    featured: true,
   },
   {
     name: "Done with you",
@@ -62,7 +63,6 @@ const tiers: Tier[] = [
     cta: "Buy Done with you",
     url: siteConfig.CHECKOUT_ONBOARDING_URL,
     note: "Buy, then book your onboarding call.",
-    featured: true,
   },
 ];
 
@@ -98,6 +98,7 @@ function useChartWidth() {
 }
 
 function TierCard({ t }: { t: Tier }) {
+  const action = planAction(t.url, t.cta);
   return (
     <div
       className={cn(
@@ -109,7 +110,7 @@ function TierCard({ t }: { t: Tier }) {
         <div className="h-6">
           {t.featured && (
             <span className="inline-block rounded-full bg-blue-strong px-2.5 py-1 text-[11px] font-bold uppercase leading-none tracking-[.06em] text-white">
-              Set up for you
+              Recommended
             </span>
           )}
         </div>
@@ -132,11 +133,11 @@ function TierCard({ t }: { t: Tier }) {
         </ul>
 
         <div className="mt-auto grid gap-3 pt-8">
-          <ButtonLink variant="buy" className="w-full" {...buyLink(t.url)}>
-            {t.cta}
+          <ButtonLink variant={action.kind === "buy" ? "buy" : "ink"} className="w-full" {...action.link}>
+            {action.label}
           </ButtonLink>
           <p className="min-h-5 text-center text-[13px] font-medium leading-5 text-muted-foreground">
-            {t.url ? t.note : "Checkout opening soon"}
+            {action.kind === "buy" ? t.note : null}
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Selling with Social",
   description:
-    "Use social media to sell more of your services. One system for your ads, pages, leads and follow-up.",
+    "Turn your social ads into booked customers. One system runs the ad, the page, the reply and the follow-up.",
 };
 
 export const viewport: Viewport = {

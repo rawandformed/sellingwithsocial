@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 const links = [
   { href: "#why", label: "Why us" },
   { href: PRICING_ANCHOR, label: "Pricing" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 /** True while the nav sits over a dark block (any element with data-dark). */

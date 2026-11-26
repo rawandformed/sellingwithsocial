@@ -8,8 +8,7 @@ import { Play } from "lucide-react";
   requested until the visitor presses play, so the video cannot slow down the
   first paint. The poster is drawn in code.
 
-  While `src` is empty the poster says the video is coming and the play
-  button is switched off.
+  Only render this when there is a video. With no `src` it renders nothing.
 */
 
 const isFile = (url: string) => /\.(mp4|webm|mov)(\?|#|$)/i.test(url);
@@ -17,7 +16,9 @@ const isFile = (url: string) => /\.(mp4|webm|mov)(\?|#|$)/i.test(url);
 export function VslPlayer({ src, title = "How Selling with Social works" }: { src: string; title?: string }) {
   const [playing, setPlaying] = useState(false);
 
-  if (playing && src) {
+  if (!src) return null;
+
+  if (playing) {
     return isFile(src) ? (
       <video src={src} controls autoPlay playsInline className="size-full bg-black object-contain" />
     ) : (
@@ -34,10 +35,9 @@ export function VslPlayer({ src, title = "How Selling with Social works" }: { sr
   return (
     <button
       type="button"
-      disabled={!src}
       onClick={() => setPlaying(true)}
-      aria-label={src ? `Play video: ${title}` : "Video coming soon"}
-      className="group relative block size-full cursor-pointer overflow-hidden bg-linear-to-br from-[#e4eefd] via-[#f6f9ff] to-[#dbe8fd] text-left disabled:cursor-default"
+      aria-label={`Play video: ${title}`}
+      className="group relative block size-full cursor-pointer overflow-hidden bg-linear-to-br from-[#e4eefd] via-[#f6f9ff] to-[#dbe8fd] text-left"
     >
       {/* Poster artwork: soft glows and three floating product cards */}
       <span aria-hidden="true" className="absolute -left-[8%] top-[10%] size-[46%] rounded-full bg-[#86b4ff] opacity-45 blur-[60px]" />
@@ -58,11 +58,11 @@ export function VslPlayer({ src, title = "How Selling with Social works" }: { sr
 
       <span className="absolute inset-0 grid place-items-center">
         <span className="grid justify-items-center gap-4">
-          <span className="grid size-[72px] place-items-center rounded-full bg-white shadow-[0_18px_40px_-12px_rgba(20,48,96,.5)] transition-transform duration-200 ease-brand group-enabled:group-hover:scale-105 sm:size-[92px]">
+          <span className="grid size-[72px] place-items-center rounded-full bg-white shadow-[0_18px_40px_-12px_rgba(20,48,96,.5)] transition-transform duration-200 ease-brand group-hover:scale-105 sm:size-[92px]">
             <Play className="ml-1 size-7 fill-ink text-ink sm:size-9" strokeWidth={0} />
           </span>
           <span className="rounded-full bg-white/80 px-3.5 py-1.5 text-[13px] font-semibold text-ink-2 backdrop-blur sm:text-[14px]">
-            {src ? "Watch how it works" : "Video coming soon"}
+            Watch how it works
           </span>
         </span>
       </span>
