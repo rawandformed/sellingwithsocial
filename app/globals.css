@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+/*
+  Selling with Social. SWS Design System V1, Palette A.
+  Brand tokens first, then the shadcn names mapped onto them so pasted
+  shadcn components pick up the brand without edits.
+*/
+:root {
+  --base: #fbfbf8;
+  --surface: #ffffff;
+  --line: #e6e4de;
+  --line-2: #d6d3cb;
+  --ink: #101419;
+  --ink-2: #3f454d;
+  --ink-muted: #6b7177;
+  --faint: #a3a8ad;
+  --blue: #5f92e2;
+  --blue-strong: #356ec6;
+  --blue-soft: #eef4fd;
+  --yellow: #ffcf34;
+  --yellow-hover: #f2c01f;
+  --yellow-soft: #fff6d6;
+  --yellow-ink: #7a5800;
+  --navy: #08162a;
+  --navy-2: #0f2038;
+  --navy-line: #1f3352;
+  --navy-ink-2: #aebcd0;
+  --success: #1f8a4c;
+  --hot: #d9483b;
+
+  /* shadcn names */
+  --background: var(--base);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: #ffffff;
+  --secondary: #f3f2ed;
+  --secondary-foreground: var(--ink);
+  --muted: #f3f2ed;
+  --muted-foreground: var(--ink-muted);
+  --accent: var(--blue-soft);
+  --accent-foreground: var(--ink);
+  --destructive: var(--hot);
+  --border: var(--line);
+  --input: var(--line-2);
+  --ring: var(--blue-strong);
+  --radius: 20px;
+}
+
+@theme inline {
+  --color-base: var(--base);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-faint: var(--faint);
+  --color-blue: var(--blue);
+  --color-blue-strong: var(--blue-strong);
+  --color-blue-soft: var(--blue-soft);
+  --color-yellow: var(--yellow);
+  --color-yellow-hover: var(--yellow-hover);
+  --color-yellow-soft: var(--yellow-soft);
+  --color-yellow-ink: var(--yellow-ink);
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-navy-line: var(--navy-line);
+  --color-navy-ink-2: var(--navy-ink-2);
+  --color-success: var(--success);
+  --color-hot: var(--hot);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-display: var(--font-bricolage), ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: var(--font-figtree), -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-card: 20px;
+  --container-col: 1080px;
+  --container-col-narrow: 720px;
+
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --shadow-card: 0 1px 2px rgba(16, 20, 25, 0.05), 0 1px 1px rgba(16, 20, 25, 0.03);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    background: var(--base);
+    color: var(--ink);
+    font: 400 17px/27px var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--blue-strong);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+/* Page column: 1080px plus gutters that respect the phone safe area. */
+@utility wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: calc(var(--container-col) + 48px);
+  margin-inline: auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  @media (max-width: 640px) {
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+}
+
+/* Eyebrow label: Figtree bold 13px uppercase. */
+@utility eyebrow {
+  font: 700 13px/16px var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-strong);
+}
+
+/* Yellow highlight bar under a word. Light backgrounds only. */
+@utility hl {
+  background: linear-gradient(
+    transparent 62%,
+    var(--yellow) 62%,
+    var(--yellow) 94%,
+    transparent 94%
+  );
+}
+
+/* Frosted glass card on light backgrounds. */
+@utility glass {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.44));
+  -webkit-backdrop-filter: blur(22px) saturate(1.7);
+  backdrop-filter: blur(22px) saturate(1.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.3),
+    0 28px 60px -28px rgba(20, 48, 96, 0.32),
+    0 2px 6px rgba(20, 48, 96, 0.05);
+}
+
+/* Frosted glass card on navy. */
+@utility glass-dark {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.03));
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  backdrop-filter: blur(22px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 30px 70px -24px rgba(0, 0, 0, 0.6);
+}
+
+/* Soft blurred colour glow that sits behind glass cards. */
+@utility orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+@keyframes blink {
+  50% {
+    box-shadow: 0 0 0 7px rgba(31, 138, 76, 0.05);
+  }
+}
+
+/* Rows that settle in one after another. Set --i to the row index. */
+@keyframes settle {
+  from {
+    opacity: 0.35;
+    transform: translateY(6px) scale(0.99);
+  }
+}
+@utility settle {
+  animation: settle 0.6s var(--ease-brand) backwards;
+  animation-delay: calc(0.7s + var(--i, 0) * 0.65s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
