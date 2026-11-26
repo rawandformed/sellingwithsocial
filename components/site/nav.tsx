@@ -8,7 +8,10 @@ import { ButtonLink } from "@/components/ui/button";
 import { PRICING_ANCHOR } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
-const links = [{ href: PRICING_ANCHOR, label: "Pricing" }];
+const links = [
+  { href: "#why", label: "Why us" },
+  { href: PRICING_ANCHOR, label: "Pricing" },
+];
 
 /** True while the nav sits over a dark block (any element with data-dark). */
 function useOverDark() {
